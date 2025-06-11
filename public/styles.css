@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  animation: fadeIn 1s ease-in;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.intro h1 {
+  font-size: 3rem;
+  color: #38bdf8;
+}
+
+.intro h2 {
+  color: #94a3b8;
+}
+
+.project-title {
+  color: #e0f2fe;
+  font-size: 1.5rem;
+}
+
+.pitch {
+  color: #cbd5e1;
+  margin-top: 0.5rem;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.tab-btn {
+  background: #1e293b;
+  border: none;
+  padding: 10px 20px;
+  color: #f1f5f9;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+.tab-content {
+  display: none;
+  margin-top: 1.5rem;
+  background: #1e293b;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #334155;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

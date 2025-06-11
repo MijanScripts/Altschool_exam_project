@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title><%= projectTitle %></title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="intro">
+      <h1><%= name %></h1>
+      <h2><%= role %></h2>
+      <p class="project-title"><%= projectTitle %></p>
+      <p class="pitch"><%= pitch %></p>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="tabs">
+      <button class="tab-btn active" onclick="openTab('about')">About Me</button>
+      <button class="tab-btn" onclick="openTab('skills')">Skills</button>
+      <button class="tab-btn" onclick="openTab('projects')">Projects</button>
+      <button class="tab-btn" onclick="openTab('education')">Education</button>
+    </nav>
+
+    <!-- Tab Content Areas -->
+    <section id="about" class="tab-content active">
+      <p>I am a passionate cloud and devops engineer focused on building scalable, secure, and automated infrastructure solutions for real-world businesses like Smartway Daycare.</p>
+    </section>
+
+    <section id="skills" class="tab-content">
+      <ul>
+        <li>AWS</li>
+        <li>Linux</li>
+        <li>PostgreSQL</li>
+        <li>Docker</li>
+        <li>Terraform</li>
+        <li>Kubernetes</li>
+        <li>Apache</li>
+        <li>React</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="tab-content">
+      <ul>
+        <li>Smartway Daycare Platform (Deployed on EC2, PostgreSQL, Node)</li>
+        <li>Cloud Infrastructure Automation with Terraform</li>
+        <li>Personal Portfolio Hosting with Contact Form</li>
+      </ul>
+    </section>
+
+    <section id="education" class="tab-content">
+      <p>B.Eng. in Structural Engineering</p>
+      <p>Cloud Engineering Certifications (In Progress)</p>
+    </section>
+  </main>
+
+  <script>
+    function openTab(tabId) {
+      document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
+      document.querySelectorAll(".tab-content").forEach(tab => tab.classList.remove("active"));
+      document.getElementById(tabId).classList.add("active");
+      event.target.classList.add("active");
+    }
+  </script>
+</body>
+</html>
