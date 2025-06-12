@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 4000;
 
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
@@ -20,5 +20,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`🚀 Landing page live at http://localhost:${port}`);
+  console.log(`Server is live at http://localhost:${port}`);
 });
