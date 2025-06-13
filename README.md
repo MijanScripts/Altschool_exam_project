@@ -4,7 +4,8 @@
 
 This README outlines the steps to deploy a Node.js website on an Ubuntu EC2 instance using Nginx as a reverse proxy, along with domain setup and SSL certification using Certbot.
 
-##  Landing Page [Click to Visit Website](https://mijanscript.xyz)
+##  Landing Page
+### [Click to Visit Website](https://mijanscript.xyz)
 ![alt text](landingpage.png)
 ---
 
