@@ -6,6 +6,7 @@ This README outlines the steps to deploy a Node.js website on an Ubuntu EC2 inst
 
 ##  Landing Page
 ### [Click Here to Visit Website](https://mijanscript.xyz)
+#### https://mijanscript.xyz
 ![alt text](landingpage.png)
 ---
 
