@@ -1,7 +1,7 @@
 # Altschool_exam_project
 
 # Node.js Website Deployment on Ubuntu EC2 with Nginx, Domain, and SSL
-
+![alt text](landingpage.png)
 This README outlines the steps to deploy a Node.js website on an Ubuntu EC2 instance using Nginx as a reverse proxy, along with domain setup and SSL certification using Certbot.
 
 ---
