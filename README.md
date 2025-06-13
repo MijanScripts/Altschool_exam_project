@@ -6,7 +6,7 @@ This README outlines the steps to deploy a Node.js website on an Ubuntu EC2 inst
 
 ---
 
-## 🚀 Prerequisites
+##  Prerequisites
 
 - An AWS account with access to create EC2 instances and Elastic IPs
 - A registered domain name (e.g., from Namecheap, GoDaddy, etc.)
@@ -15,7 +15,7 @@ This README outlines the steps to deploy a Node.js website on an Ubuntu EC2 inst
 
 ---
 
-## 🖥️ 1. Launch EC2 Instance
+##  1. Launch EC2 Instance
 
 - Launch an Ubuntu Server EC2 instance (e.g., Ubuntu 22.04 LTS)
 - Choose a security group that allows inbound traffic:
@@ -25,7 +25,7 @@ This README outlines the steps to deploy a Node.js website on an Ubuntu EC2 inst
 
 ---
 
-## 🛠️ 2. Connect and Setup Server
+##  2. Connect and Setup Server
 
 ```bash
 ssh -i /path/to/my-key.pem ubuntu@your-ec2-public-ip
@@ -39,7 +39,7 @@ sudo apt update && sudo apt upgrade -y
 
 ---
 
-## 📦 3. Cloned My Node.js App
+##  3. Cloned My Node.js App
 
 ```bash
 cd ~
@@ -51,7 +51,7 @@ cd my-nodejs-repo
 
 ---
 
-## 🔧 4. Create a systemd Service for Node.js
+##  4. Create a systemd Service for Node.js
 
 Create a service file:
 
@@ -96,7 +96,7 @@ sudo systemctl status myapp.service
 
 ---
 
-## 🌐 5. Install and Configure Nginx
+##  5. Install and Configure Nginx
 
 ```bash
 sudo apt install nginx -y
@@ -136,7 +136,7 @@ sudo systemctl restart nginx
 
 ---
 
-## 🌍 6. Allocate and Associate Elastic IP
+##  6. Allocate and Associate Elastic IP
 
 - In AWS EC2 Dashboard:
   - Go to **Elastic IPs**
@@ -147,7 +147,7 @@ Update my domain's DNS **A record** to point to this Elastic IP.
 
 ---
 
-## 🔒 7. Open Inbound Ports in Security Group
+##  7. Open Inbound Ports in Security Group
 
 Edit my EC2 instance's security group to allow:
 
@@ -156,7 +156,7 @@ Edit my EC2 instance's security group to allow:
 
 ---
 
-## ✅ 8. Install Certbot and Enable HTTPS
+##  8. Install Certbot and Enable HTTPS
 
 ```bash
 sudo apt install certbot python3-certbot-nginx -y
@@ -172,7 +172,7 @@ Follow the prompts to allow HTTPS access and redirect HTTP to HTTPS.
 
 ---
 
-## 🧪 9. Verify Everything Works
+##  9. Verify Everything Works
 
 - Visit `http://mijanscript.xyz` → should redirect to `https://mijanscript.xyz`
 - `systemctl status myapp.service` → should be `active (running)`
@@ -180,7 +180,7 @@ Follow the prompts to allow HTTPS access and redirect HTTP to HTTPS.
 
 ---
 
-## ♻️ Optional: Restart Services
+##  Optional: Restart Services
 
 If you change configs later, restart both services:
 
@@ -191,7 +191,7 @@ sudo systemctl restart nginx
 
 ---
 
-## 📌 Summary
+##  Summary
 
 | Component       | Purpose                                  |
 |----------------|-------------------------------------------|
@@ -204,7 +204,7 @@ sudo systemctl restart nginx
 
 ---
 
-## 🧼 Troubleshooting
+##  Troubleshooting
 
 - Check Nginx logs: `sudo journalctl -u nginx` or `sudo tail -f /var/log/nginx/error.log`
 - Check Node.js app logs: `sudo journalctl -u myapp`
@@ -212,6 +212,6 @@ sudo systemctl restart nginx
 
 ---
 
-## 🏁 Done!
+##  Done!
 
 My Node.js app is now running securely on a custom domain (mijanscript.xyz) using HTTPS with auto-restart and reverse proxy configured.
