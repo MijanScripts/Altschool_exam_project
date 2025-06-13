@@ -9,14 +9,6 @@ This README outlines the steps to deploy a Node.js website on an Ubuntu EC2 inst
 ![alt text](landingpage.png)
 ---
 
-##  Prerequisites
-
-- An AWS account with access to create EC2 instances and Elastic IPs
-- A registered domain name (e.g., from Namecheap, GoDaddy, etc.)
-- GitHub repository containing your Node.js website
-- Basic knowledge of the Linux terminal
-
----
 
 ##  1. Launch EC2 Instance
 
@@ -31,7 +23,7 @@ This README outlines the steps to deploy a Node.js website on an Ubuntu EC2 inst
 ##  2. Connect and Setup Server
 
 ```bash
-ssh -i /path/to/my-key.pem ubuntu@your-ec2-public-ip
+ssh -i /path/to/my-key.pem ubuntu@my-ec2-public-ip
 ```
 
 ### Update and Upgrade the Server
