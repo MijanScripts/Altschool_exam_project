@@ -65,21 +65,24 @@ Add the following:
 
 ```ini
 [Unit]
-Description=Node.js Application
-After=network.target
+Description=My Altschool exam App
+After=network.target multi-user.tar
 
 [Service]
-ExecStart=/usr/bin/node /home/ubuntu/Altschool_exam_project/myapp.js
+ExecStart=/usr/bin/npm start
 Restart=always
 User=ubuntu
-Environment=PORT=5050
+Environment=NODE_ENV=production
+EnvironmentFile=/etc/myapp.env
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=my_altschool_exam_app
 WorkingDirectory=/home/ubuntu/Altschool_exam_project
 
 [Install]
 WantedBy=multi-user.target
 ```
 
-> Replace `/myapp.js` with my actual entry file.
 
 ### Reload, Enable, and Start the Service
 
