@@ -46,10 +46,9 @@ sudo apt update && sudo apt upgrade -y
 ```bash
 cd ~
 git clone https://github.com/Mijanscripts/Altschool_exam_project.git
-cd my-nodejs-repo
+cd Altschool_exam_project
 ```
 
-> Make sure my app listens on `localhost:5050` or update my code to do so.
 
 ---
 
